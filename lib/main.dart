@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notely/screens/splash_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
+      home: const SplashScreen(),
     );
   }
 }
