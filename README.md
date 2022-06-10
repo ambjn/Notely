@@ -2,7 +2,7 @@
 
 ## About:
 
-An app development task given by <a href="https://phera.in">Phera</a>, the task at hand is to design a note taking app for mobile.
+An app development task given by <a href="https://phera.in" target= "_blank">Phera</a>, the task at hand is to design a note taking app for mobile.
 
 ## Packages:
 
