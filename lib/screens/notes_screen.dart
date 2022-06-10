@@ -47,6 +47,7 @@ class _NotesScreenState extends State<NotesScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           centerTitle: false,
           title: const Text(
             'My Notes',
@@ -110,18 +111,15 @@ class _NotesScreenState extends State<NotesScreen> {
             const SizedBox(
               height: 20,
             ),
-            Expanded(
-              child: Center(
-                child: _isLoading
-                    ? const CircularProgressIndicator()
-                    : notes.isEmpty
-                        ? const Text(
-                            'no notes :(',
-                            style:
-                                TextStyle(color: Colors.black87, fontSize: 24),
-                          )
-                        : buildNotes(),
-              ),
+            Center(
+              child: _isLoading
+                  ? const CircularProgressIndicator()
+                  : notes.isEmpty
+                      ? const Text(
+                          'no notes :(',
+                          style: TextStyle(color: Colors.black87, fontSize: 24),
+                        )
+                      : Expanded(child: buildNotes()),
             ),
           ],
         ),
