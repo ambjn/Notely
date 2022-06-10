@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notely/model/category_model.dart';
 import 'package:notely/model/note_model.dart';
+import 'package:notely/screens/edit_note_screen.dart';
+import 'package:notely/screens/notes_detail_screen.dart';
 import 'package:notely/sqflite_database/db.dart';
+import 'package:notely/widgets/category_tile.dart';
+import 'package:notely/widgets/note_card.dart';
 
 class NotesScreen extends StatefulWidget {
   const NotesScreen({super.key});
@@ -126,7 +130,7 @@ class _NotesScreenState extends State<NotesScreen> {
           child: const Icon(FontAwesomeIcons.plus),
           onPressed: () async {
             await Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const EditNotePage()),
+              MaterialPageRoute(builder: (context) => const EditNoteScreen()),
             );
 
             refreshNotes();
@@ -143,13 +147,13 @@ class _NotesScreenState extends State<NotesScreen> {
         return GestureDetector(
           onTap: () async {
             await Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => NoteDetailPage(noteId: note.id!),
+              builder: (context) => NotesDetailScreen(noteId: note.id!),
             ));
             refreshNotes();
           },
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: NoteCardWidget(note: note, index: index),
+            child: NoteCard(note: note, index: index),
           ),
         );
       }));
