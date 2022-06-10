@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notely/model/note_model.dart';
 import 'package:notely/sqflite_database/db.dart';
+import 'package:notely/widgets/note_form.dart';
 
 class EditNoteScreen extends StatefulWidget {
   const EditNoteScreen({Key? key, this.note}) : super(key: key);
@@ -43,7 +44,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
       ),
       body: Form(
         key: _formKey,
-        child: NoteFormWidget(
+        child: NoteForm(
           title: title,
           description: description,
           onChangedTitle: (title) => setState(() => this.title = title),

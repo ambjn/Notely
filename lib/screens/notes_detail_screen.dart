@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:notely/model/note_model.dart';
+import 'package:notely/screens/edit_note_screen.dart';
+import 'package:notely/sqflite_database/db.dart';
 
 class NotesDetailScreen extends StatefulWidget {
   const NotesDetailScreen({super.key, required this.noteId});
@@ -94,7 +96,7 @@ class _NotesDetailScreenState extends State<NotesDetailScreen> {
                     onPressed: () async {
                       if (_isLoading) return;
                       await Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => EditNotePage(note: note),
+                        builder: (context) => EditNoteScreen(note: note),
                       ));
 
                       refreshNote();
@@ -122,7 +124,7 @@ class _NotesDetailScreenState extends State<NotesDetailScreen> {
       onPressed: () async {
         if (_isLoading) return;
         await Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => EditNotePage(note: note),
+          builder: (context) => EditNoteScreen(note: note),
         ));
 
         refreshNote();
