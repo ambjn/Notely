@@ -111,15 +111,18 @@ class _NotesScreenState extends State<NotesScreen> {
             const SizedBox(
               height: 20,
             ),
-            Center(
-              child: _isLoading
-                  ? const CircularProgressIndicator()
-                  : notes.isEmpty
-                      ? const Text(
-                          'no notes :(',
-                          style: TextStyle(color: Colors.black87, fontSize: 24),
-                        )
-                      : Expanded(child: buildNotes()),
+            Expanded(
+              child: Center(
+                child: _isLoading
+                    ? const CircularProgressIndicator()
+                    : notes.isEmpty
+                        ? const Text(
+                            'no notes :(',
+                            style:
+                                TextStyle(color: Colors.black87, fontSize: 24),
+                          )
+                        : buildNotes(),
+              ),
             ),
           ],
         ),
