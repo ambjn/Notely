@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notely/screens/notes_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -46,7 +47,11 @@ class SplashScreen extends StatelessWidget {
                         width: 150.0,
                         height: 50.0,
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              await Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (_) => const NotesScreen()));
+                            },
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     Colors.teal.shade700),
