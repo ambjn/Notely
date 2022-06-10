@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notely/model/category_model.dart';
+import 'package:notely/model/note_model.dart';
+import 'package:notely/sqflite_database/db.dart';
 
 class NotesScreen extends StatefulWidget {
   const NotesScreen({super.key});
