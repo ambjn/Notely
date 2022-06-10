@@ -30,6 +30,7 @@ class NoteCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // improvise and adapt using problem statement
             Row(
               children: [
                 const CustomIcon(

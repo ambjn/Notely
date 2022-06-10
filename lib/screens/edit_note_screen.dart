@@ -20,8 +20,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
   @override
   void initState() {
     super.initState();
-    title = widget.note?.title ?? '';
-    description = widget.note?.description ?? '';
+    title = widget.note?.title ?? ''; // by default empty
+    description = widget.note?.description ?? ''; // by default empty
   }
 
   @override
@@ -95,7 +95,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
       ));
 
   Widget buildButton() {
-    final isFormValid = title.isNotEmpty && description.isNotEmpty;
+    final isFormValid =
+        title.isNotEmpty && description.isNotEmpty; // check is form valid
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
@@ -112,6 +113,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
     );
   }
 
+//addOrUpdateNote
   void addOrUpdateNote() async {
     final isValid = _formKey.currentState!.validate();
     if (isValid) {
@@ -121,12 +123,11 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
       } else {
         await addNote();
       }
-
-      // await showAlertDialog(context);
       Navigator.of(context).pop();
     }
   }
 
+//updateNote
   Future updateNote() async {
     final note = widget.note!.copy(
       title: title,
@@ -136,6 +137,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
     await NotesDatabase.instance.update(note);
   }
 
+//addNote
   Future addNote() async {
     final note = Note(
       title: title,
