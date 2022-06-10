@@ -32,6 +32,7 @@ class SplashScreen extends StatelessWidget {
               ),
               Expanded(
                 child: Stack(
+                  //use stack for easy overlaping of widgets
                   alignment: Alignment.bottomRight,
                   children: [
                     Container(

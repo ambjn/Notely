@@ -18,20 +18,18 @@ class NotesScreen extends StatefulWidget {
 class _NotesScreenState extends State<NotesScreen> {
   TextEditingController controller = TextEditingController();
   List<CategoryModel> categoriesList = <CategoryModel>[];
-
   List<Note> notes = <Note>[];
   bool _isLoading = false;
 
   @override
   void initState() {
     categoriesList = getCategories();
-
     super.initState();
-
     refreshNotes();
   }
 
   @override
+  // close instance
   void dispose() {
     NotesDatabase.instance.close();
     super.dispose();
@@ -47,7 +45,8 @@ class _NotesScreenState extends State<NotesScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading:
+              false, // imp for removing pre-defined back arrow in appBar
           centerTitle: false,
           title: const Text(
             'My Notes',
@@ -126,7 +125,8 @@ class _NotesScreenState extends State<NotesScreen> {
             ),
           ],
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButtonLocation: FloatingActionButtonLocation
+            .endFloat, // use floatingActionButton for uninterrupted listview since it doesn't cause out of pixels error
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.teal.shade700,
           child: const Icon(FontAwesomeIcons.plus),
@@ -142,7 +142,7 @@ class _NotesScreenState extends State<NotesScreen> {
 
   Widget buildNotes() => ListView.builder(
       shrinkWrap: true,
-      physics: const ClampingScrollPhysics(),
+      physics: const ClampingScrollPhysics(), // enable for both-ways scrolling
       itemCount: notes.length,
       itemBuilder: ((context, index) {
         final note = notes[index];
