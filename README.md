@@ -18,12 +18,36 @@ An app development task given by <a href="https://phera.in" target="_blank">Pher
 
 <ul>
 <li> CRUD Operations of the app was performed by building an SQFLite database. </li>
-<li> Clean Architecture was implements by dividing the app into sub-components: 
+<li> Clean Architecture was implements by dividing the app into sub-components:
 <ul>
-<li>model</li>
-<li>screens</li>
-<li>sqflite_database</li>
-<li>widgets</li>
+
+<li> model <ul>
+<li> category_model </li>
+<li> note_model </li>
+</ul>
+</li>
+
+<li> screens <ul>
+<li> edit_note_screen </li>
+<li> notes_detail_screen </li>
+<li> notes_screen </li>
+<li> splash_screen </li>
+</ul>
+</li>
+
+<li> sqflite_database <ul>
+<li> db </li>
+</ul>
+</li>
+
+<li> widgets <ul>
+<li> category_tile </li>
+<li> custom_button </li>
+<li> note_card </li>
+<li> note_form </li>
+</ul>
+</li>
+
 </ul> 
 </li>
 <li> App is tested through Unit Testing, Widget Testing & Integration Testing. </li>
