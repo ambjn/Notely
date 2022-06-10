@@ -47,6 +47,7 @@ class _NotesScreenState extends State<NotesScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          centerTitle: false,
           title: const Text(
             'My Notes',
             style: TextStyle(fontSize: 24, color: Colors.black),
@@ -55,7 +56,7 @@ class _NotesScreenState extends State<NotesScreen> {
             ClipRRect(
                 borderRadius: BorderRadius.circular(5),
                 child: Image.asset(
-                  "lib/1.png",
+                  "assets/images/1.png",
                   fit: BoxFit.cover,
                 )),
             const SizedBox(width: 25),
