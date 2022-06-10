@@ -26,8 +26,9 @@ An app development task given by <a href="https://phera.in" target="_blank">Pher
 <li>widgets</li>
 </ul> 
 </li>
-<li> App is tested through Unit Testing,Widget Testing & Integration Testing . </li>
+<li> App is tested through Unit Testing, Widget Testing & Integration Testing. </li>
 </ul>
+Comments in the code, helps for better understanding of how the app works.
 
 ### Installation:
 
