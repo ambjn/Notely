@@ -14,7 +14,7 @@ An app development task given by <a href="https://phera.in" target="_blank">Pher
 <li> image_picker: ^0.8.5+3 </li>
 </ul>
 
-## Implementation Description:
+## Description:
 
 <ul>
 <li> CRUD Operations of the app was performed by building an SQFLite database. </li>
