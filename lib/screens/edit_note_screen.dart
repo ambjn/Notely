@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notely/model/note_model.dart';
+import 'package:notely/sqflite_database/db.dart';
 
 class EditNoteScreen extends StatefulWidget {
   const EditNoteScreen({Key? key, this.note}) : super(key: key);
@@ -142,38 +144,3 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
     await NotesDatabase.instance.create(note);
   }
 }
-  // showAlertDialog(BuildContext context) {
-  //   // set up the buttons
-  //   Widget cancelButton = TextButton(
-  //     child: const Text("No"),
-  //     onPressed: () {
-  //       Navigator.of(context).pop();
-  //     },
-  //   );
-  //   Widget continueButton = TextButton(
-  //     child: const Text("Yes"),
-  //     onPressed: () {
-  //       CustomIcon(
-  //         icon: generalIcon,
-  //         color: Colors.green,
-  //       );
-  //     },
-  //   );
-
-  // set up the AlertDialog
-  // AlertDialog alert = AlertDialog(
-  //   content: Text("Confirm note type as General,with yes and no option."),
-  //   actions: [
-  //     cancelButton,
-  //     continueButton,
-  //   ],
-  // );
-
-  // // show the dialog
-  // showDialog(
-  //   context: context,
-  //   builder: (BuildContext context) {
-  //     return alert;
-  //   },
-  // );
-
