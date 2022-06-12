@@ -68,5 +68,4 @@ In the command terminal, run the following commands:
 <img src = 'https://github.com/ambjn/Notely/blob/master/screenshots/2.png' alt='screenshot-of-app-2'> 
 <img src = 'https://github.com/ambjn/Notely/blob/master/screenshots/3.png' alt='screenshot-of-app-3'> 
 <img src = 'https://github.com/ambjn/Notely/blob/master/screenshots/4.png' alt='screenshot-of-app-4'>
-
 </center>
